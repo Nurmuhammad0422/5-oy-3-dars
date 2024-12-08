@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="p-5 bg-gray-300">
+    <button class="flex items-center shadow shadow-[0px_3px_8px_#8b8888] w-[500px] h-[45px] bg-white rounded-[50px] mx-auto">
+        <input class="search-input w-[300px] block outline-none p-2 rounded-[5px] mr-[100px] mx-auto" type="text" placeholder="Enter name or randomnumber...">
+        <hr class="w-[1px] h-[30px] bg-gray-300">
+        <div class="w-[40px] h-[30px] flex justify-center mx-auto bg-[#FF4742] rounded-[20px]">
+          <img src="./images/search-icon.svg" width="15" height="15" alt="search-icon">
+        </div>
+    </button>
+    <div class="flex justify-between mt-6">
+      <ul class="pokemon-list w-[64%] h-[85vh] overflow-y-auto p-5 rounded-md flex flex-wrap gap-10 justify-between"></ul>
+      <div class="selected-pokemon w-[34%] p-5"></div>
+    </div>
+
+    <script src="./js/pakemon.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </body>
+</html>
